@@ -5,9 +5,9 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "75fd5b5d94fa5091c1cff3ae4094fccd",
 "splash/style.css": "71533778dc93ea83ad31bb3835b3f48b",
-"index.html": "784bc01b9eeee9904055bcc3eb177924",
-"/": "784bc01b9eeee9904055bcc3eb177924",
-"main.dart.js": "4100c0e366b6a856710bd9e3858c3d1c",
+"index.html": "e5ffe43afbac9a485fbfc680713f9054",
+"/": "e5ffe43afbac9a485fbfc680713f9054",
+"main.dart.js": "770330137598b6b35e01180e7b43a60b",
 "icons/favicon-16x16.png": "1e1455ea021ad50fc747281546eea969",
 "icons/favicon.ico": "62c8827f7922ae2f63e129077845d4e6",
 "icons/apple-icon.png": "2a78c598afe5f475565809ea68b8da9b",
@@ -38,8 +38,8 @@ const RESOURCES = {
 "icons/favicon-32x32.png": "fb767e7ed8849b4d891c12d1e8d59fef",
 "icons/ms-icon-70x70.png": "b1f3f25021c1b1ac72ed32868751d008",
 "manifest.json": "079935e2fae24e4ea9118e81a390e275",
-"assets/AssetManifest.json": "e993adf00bf56f81a98f66476280cea6",
-"assets/NOTICES": "6c52ccad43ce4ec5193035ccef79ba4e",
+"assets/AssetManifest.json": "4747771541068fa4ca8c3afc5ba7e5be",
+"assets/NOTICES": "e05cbb6c94307d3933bd13a061f9faa6",
 "assets/FontManifest.json": "1b1e7812d9eb9f666db8444d7dde1b20",
 "assets/packages/material_design_icons_flutter/lib/fonts/materialdesignicons-webfont.ttf": "6a2ddad1092a0a1c326b6d0e738e682b",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
@@ -378,7 +378,7 @@ async function downloadOffline() {
     }
     currentContent[key] = true;
   }
-  for (var resourceKey in Object.keys(RESOURCES)) {
+  for (var resourceKey of Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
       resources.push(resourceKey);
     }
